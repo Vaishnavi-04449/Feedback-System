@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Premium Warm Beige Background */
+    --background: 34 33% 96%;
+    /* Deep Charcoal Foreground */
+    --foreground: 222 47% 11%;
+
+    /* Card Elevation */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Rich Teal Primary */
+    --primary: 172 66% 30%;
+    --primary-foreground: 34 33% 96%;
+
+    /* Soft Moss Green Secondary */
+    --secondary: 158 35% 85%;
+    --secondary-foreground: 172 66% 15%;
+
+    --muted: 34 20% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 158 35% 85%;
+    --accent-foreground: 172 66% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 172 66% 30%;
+
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    /* Deep Slate/Charcoal Background */
+    --background: 222 47% 7%;
+    --foreground: 34 33% 98%;
+
+    /* Elevated Card Surface */
+    --card: 222 47% 10%;
+    --card-foreground: 34 33% 98%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 34 33% 98%;
+
+    /* Bright Teal Primary */
+    --primary: 172 66% 50%;
+    --primary-foreground: 222 47% 7%;
+
+    /* Muted Sage Secondary */
+    --secondary: 158 20% 20%;
+    --secondary-foreground: 158 35% 85%;
+
+    --muted: 222 47% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 158 20% 20%;
+    --accent-foreground: 158 35% 85%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 15%;
+    --input: 222 47% 15%;
+    --ring: 172 66% 50%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
