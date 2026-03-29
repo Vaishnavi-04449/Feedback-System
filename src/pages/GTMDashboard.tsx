@@ -75,7 +75,11 @@ const GTMDashboard: React.FC = () => {
                 className="w-full pl-12 pr-4 py-3.5 bg-card border border-border rounded-2xl text-sm font-semibold shadow-sm focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all text-foreground"
               />
             </div>
-            <button className="p-3.5 bg-card border border-border rounded-2xl text-muted-foreground hover:text-primary transition-all shadow-sm">
+            <button
+              type="button"
+              aria-label="Open filter options"
+              className="p-3.5 bg-card border border-border rounded-2xl text-muted-foreground hover:text-primary transition-all shadow-sm"
+            >
               <SlidersHorizontal size={20} />
             </button>
           </div>
